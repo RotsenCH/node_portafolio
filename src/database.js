@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const {DBUSER,DBPASSWORD,DBNAME} = process.env
 
-const MONGODB_URI = 'mongodb://0.0.0.0:27017/portafolio'
+const MONGODB_URI = `mongodb+srv://${DBUSER}:${DBPASSWORD}@inicio.vwjmgsk.mongodb.net/${DBNAME}`
 
 connection = async()=>{
     try {
